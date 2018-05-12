@@ -6,29 +6,24 @@ import com.autumn.utag.enumeration.UserType;
 import com.autumn.utag.util.Response;
 import com.autumn.utag.vo.UserVO;
 
-import java.io.IOException;
 import java.util.List;
 
+/**
+ * 所谓对用户的CURD
+ */
 public interface UserService {
     /**
-     *
+     *所以增加
      * @return
      */
-    Response<Boolean> saveUser(String user, String password, UserType userType) throws IOException;
+    Response<Boolean> saveUser(String user, String password, UserType userType);
 
 
     /**
-     *
+     * 所谓删除
      * @return
      */
     Response<Boolean> deleteUser(String user);
-
-
-    /**
-     *
-     * @return
-     */
-    Response<Boolean> updateUser(String user, String password);
 
 
     /**

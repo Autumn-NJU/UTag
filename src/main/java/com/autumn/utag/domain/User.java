@@ -4,6 +4,7 @@ package com.autumn.utag.domain;
  * 用户信息的持久类，思考如何让用户充大会员的方法
  */
 import com.autumn.utag.enumeration.*;
+import javafx.beans.DefaultProperty;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -34,6 +35,7 @@ public class User implements Serializable {
     /**
      * 级别
      */
+
     private int level;
 
     /**
@@ -65,6 +67,7 @@ public class User implements Serializable {
         this.username = username;
         this.password = password;
         this.userType = userType;
+        this.property = 100;
     }
 
     public User(String username, String password, double property, int level, double experience) {
@@ -86,6 +89,8 @@ public class User implements Serializable {
         this.vip = vip;
         this.userType = userType;
     }
+
+
 
     public double getProperty() {
         return property;
